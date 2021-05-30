@@ -14,7 +14,7 @@
 
 **Problem:** Rossmann came up with a new visual identity and the stores will need to be reformed to match that.
 
-The CFO asked store managers to predicting their daily sales for up to six weeks in advance, such that he can plan the allocation of the budget necessary to each store to be reformed.
+The CFO asked store managers to predict their daily sales up to six weeks in advance, such that he can plan the allocation of the budget necessary to each store to be reformed.
 
 **Proposed Solution:** Use machine learning to predic the daily sales up to six weeks in advance for each store, so that the CFO can use the sales prediction as portion of the budget necessary to do the reform of the store.**
 
