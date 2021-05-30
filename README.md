@@ -1,4 +1,4 @@
-# Rossman Sales Prediction
+# Rossmann Sales Prediction
 
 ![image](https://user-images.githubusercontent.com/72954917/119910864-7bb82a80-bf2e-11eb-885c-01168af8cbae.png)
 
@@ -14,9 +14,9 @@
 
 **Problem:** Rossmann came up with a new visual identity and the stores will need to be reformed to match that.
 
-The CFO asked store managers to predicting their daily sales for up to six weeks in advance, such that he can plan the allocation of the budget necessary to each store to be reformed.
+The CFO asked store managers to predict their daily sales up to six weeks in advance, such that he can plan the allocation of the budget necessary to each store to be reformed.
 
-**Proposed Solution:** Use machine learning to predic the daily sales up to six weeks in advance for each store, so that the CFO can use the sales prediction as portion of the budget necessary to do the reform of the store.**
+**Proposed Solution:** Use machine learning to predic the daily sales up to six weeks in advance for each store, so that the CFO can use the sales prediction as portion of the budget necessary to do the reform of the store.
 
 **Deliverables:** Build an API on Telegram Bot that allow the CFO to request the prediction on his cellphone of each store given an ID store.
 
@@ -30,14 +30,28 @@ The CFO asked store managers to predicting their daily sales for up to six weeks
 - 4. **Data Preparation:** Prepare data to be used by Machine Learning algorithms 
 - 5. **Feature Selection:** Select the most significant variables to train models
 - 6. **Machine Learning Moddeling:** Train machine learning models
-- 7. **Hyperparameter Fine Tunning:** Tunning moldel with better result
+- 7. **Hyperparameter Fine Tunning:** Tunning model with better result
 - 8. **Translate the result into business:** Convert machine learning performance into business results
 - 9. **Deploy:** Deploy model to production.
 
 # Top Insights
-- Stores with bigger assortment sell less overall
-- Stores that opens on christmas sell less
-- Stores with longer active promo sell less
+- **Hypothesis:** Stores with near competitors should sell less.
+  -  **FALSE** Stores with near competitors sell more.
+
+![image](https://user-images.githubusercontent.com/72954917/120121760-a77c2000-c17b-11eb-990e-fa636f4b85f2.png)
+
+
+-  **Hypothesis:** Stores with longer active promo should sell more.
+  -  **FALSE** Stores with longer active promo sell less, after certain period of time
+
+![image](https://user-images.githubusercontent.com/72954917/120121828-0b9ee400-c17c-11eb-8204-6019022c7f1a.png)
+
+
+- **Hypothesis:** Stores should sell less on school holidays.
+  - **FALSE** Stores sell more on school holidays
+
+![image](https://user-images.githubusercontent.com/72954917/120122694-adc0cb00-c180-11eb-8a48-4ce25c3ad96b.png)
+
 
 # Machine Learning Performance
 - To have a benchmark for comparisson I used a mean model
@@ -67,13 +81,11 @@ The CFO asked store managers to predicting their daily sales for up to six weeks
 - As we can see on the graph above, there are some stores that have bigger errors than the average of 11%.
 - To have a better look at the result of the model into the business, I calculated the best and worst scenario accordingly to MAE (Mean Absolute Error).
   -  To calculate the worst scenario I took the predicted sales for each store and subtract it by the MAE for that store.
-    -  predicted sales of n store - MAE of n store
-  -  To calculate the worst scenario I took the predicted sales for each store and sum it by the MAE for that store.
-    -       -  predicted sales of n store + MAE of n store
+  -  To calculate the best scenario I took the predicted sales for each store and sum it by the MAE for that store.
   - After that I summed all the worst scenarios for all stores and the best scenarios, generating this table:
 ![image](https://user-images.githubusercontent.com/72954917/119906223-2e36c000-bf24-11eb-8186-1f9cc9a01471.png)
 
-  - As we can see all stores will sell:
+  - As we can see the sum of stores will sell:
     - On the worst scenario: R$ 283,102,898.04
     - On the best scenario:  R$ 284,563,051.71
 
