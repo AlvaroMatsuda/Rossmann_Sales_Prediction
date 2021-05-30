@@ -81,7 +81,7 @@ The CFO asked store managers to predict their daily sales up to six weeks in adv
 - As we can see on the graph above, there are some stores that have bigger errors than the average of 11%.
 - To have a better look at the result of the model into the business, I calculated the best and worst scenario accordingly to MAE (Mean Absolute Error).
   -  To calculate the worst scenario I took the predicted sales for each store and subtract it by the MAE for that store.
-  -  To calculate the worst scenario I took the predicted sales for each store and sum it by the MAE for that store.
+  -  To calculate the best scenario I took the predicted sales for each store and sum it by the MAE for that store.
   - After that I summed all the worst scenarios for all stores and the best scenarios, generating this table:
 ![image](https://user-images.githubusercontent.com/72954917/119906223-2e36c000-bf24-11eb-8186-1f9cc9a01471.png)
 
