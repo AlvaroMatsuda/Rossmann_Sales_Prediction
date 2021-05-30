@@ -30,7 +30,7 @@ The CFO asked store managers to predict their daily sales up to six weeks in adv
 - 4. **Data Preparation:** Prepare data to be used by Machine Learning algorithms 
 - 5. **Feature Selection:** Select the most significant variables to train models
 - 6. **Machine Learning Moddeling:** Train machine learning models
-- 7. **Hyperparameter Fine Tunning:** Tunning moldel with better result
+- 7. **Hyperparameter Fine Tunning:** Tunning model with better result
 - 8. **Translate the result into business:** Convert machine learning performance into business results
 - 9. **Deploy:** Deploy model to production.
 
