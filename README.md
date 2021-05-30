@@ -85,7 +85,7 @@ The CFO asked store managers to predict their daily sales up to six weeks in adv
   - After that I summed all the worst scenarios for all stores and the best scenarios, generating this table:
 ![image](https://user-images.githubusercontent.com/72954917/119906223-2e36c000-bf24-11eb-8186-1f9cc9a01471.png)
 
-  - As we can see all stores will sell:
+  - As we can see the sum of stores will sell:
     - On the worst scenario: R$ 283,102,898.04
     - On the best scenario:  R$ 284,563,051.71
 
