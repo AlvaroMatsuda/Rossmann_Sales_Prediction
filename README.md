@@ -16,7 +16,7 @@
 
 The CFO asked store managers to predict their daily sales up to six weeks in advance, such that he can plan the allocation of the budget necessary to each store to be reformed.
 
-**Proposed Solution:** Use machine learning to predic the daily sales up to six weeks in advance for each store, so that the CFO can use the sales prediction as portion of the budget necessary to do the reform of the store.**
+**Proposed Solution:** Use machine learning to predic the daily sales up to six weeks in advance for each store, so that the CFO can use the sales prediction as portion of the budget necessary to do the reform of the store.
 
 **Deliverables:** Build an API on Telegram Bot that allow the CFO to request the prediction on his cellphone of each store given an ID store.
 
