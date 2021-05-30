@@ -35,9 +35,23 @@ The CFO asked store managers to predicting their daily sales for up to six weeks
 - 9. **Deploy:** Deploy model to production.
 
 # Top Insights
-- Stores with bigger assortment sell less overall
-- Stores that opens on christmas sell less
-- Stores with longer active promo sell less
+- **Hypothesis:** Stores with near competitors should sell less.
+  -  **FALSE** Stores with near competitors sell more.
+
+![image](https://user-images.githubusercontent.com/72954917/120121760-a77c2000-c17b-11eb-990e-fa636f4b85f2.png)
+
+
+-  **Hypothesis:** Stores with longer active promo should sell more.
+  -  **FALSE** Stores with longer active promo sell less, after certain period of time
+
+![image](https://user-images.githubusercontent.com/72954917/120121828-0b9ee400-c17c-11eb-8204-6019022c7f1a.png)
+
+
+- **Hypothesis:** Stores should sell less on school holidays.
+  - **FALSE** Stores sell more on school holidays
+
+![image](https://user-images.githubusercontent.com/72954917/120122694-adc0cb00-c180-11eb-8a48-4ce25c3ad96b.png)
+
 
 # Machine Learning Performance
 - To have a benchmark for comparisson I used a mean model
