@@ -1,4 +1,4 @@
-# Rossman Sales Prediction
+# Rossmann Sales Prediction
 
 ![image](https://user-images.githubusercontent.com/72954917/119910864-7bb82a80-bf2e-11eb-885c-01168af8cbae.png)
 
