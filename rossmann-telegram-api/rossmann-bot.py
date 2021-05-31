@@ -5,21 +5,21 @@ import json
 from flask import Flask, request, Response
 
 # constants
-TOKEN = '1408495088:AAGBkNuxjvE_8UhI2Xy379N3rGvMbR6OUQ8'
+TOKEN = '1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY'
 
-#https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getMe
+#https://api.telegram.org/bot11817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/getMe
 
 ## info about the bot
-#https://api.telegram.org/bot1408495088:AAGBkNuxjvE_8UhI2Xy379N3rGvMbR6OUQ8/getMe
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/getMe
 
 # Webhook
-#https://api.telegram.org/bot1408495088:AAGBkNuxjvE_8UhI2Xy379N3rGvMbR6OUQ8/setWebhook?url=https://66ef15a2c363eb.localhost.run
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/setWebhook?url=https://2ff38bb3f6a26b.localhost.run
 
 ## get updates
-#https://api.telegram.org/bot1408495088:AAGBkNuxjvE_8UhI2Xy379N3rGvMbR6OUQ8/getUpdates
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/getUpdates
 
 # send message
-#https://api.telegram.org/bot1408495088:AAGBkNuxjvE_8UhI2Xy379N3rGvMbR6OUQ8/sendMessage?chat_id=1216527560&text=Hi LOL, I am doing great, thx!
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/sendMessage?chat_id=1216527560&text=Hi LOL, I am doing great, thx!
 
 def send_message( chat_id, text ):
     url = 'https://api.telegram.org/bot{}/'.format( TOKEN )
@@ -58,7 +58,7 @@ def load_dataset( store_id ):
 
 def predict( data ):
     # API Call
-    url = 'https://rossmann-model-alvaro.herokuapp.com/rossmann/predict'
+    url = 'https://rossmann-bot-alvaro.herokuapp.com/rossmann/predict'
     header = {'Content-type': 'application/json'}
     data = data
 
@@ -80,6 +80,7 @@ def parse_message( message ):
     except ValueError:
         send_message( chat_id, 'Store ID is Wrong' )
         store_id = 'error'
+        
     return chat_id, store_id
 
 
