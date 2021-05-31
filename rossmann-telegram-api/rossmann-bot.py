@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import json
+import os
 
 from flask import Flask, request, Response
 
@@ -13,7 +14,14 @@ TOKEN = '1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY'
 #https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/getMe
 
 # Webhook
-#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/setWebhook?url=https://2ff38bb3f6a26b.localhost.run
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/setWebhook?url=https://714e5ab13c23bc.localhost.run
+
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/deleteWebhook?url=https://2ff38bb3f6a26b.localhost.run
+
+# Webhook Heroku
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/setWebhook?url=https://rossmann-telegram-bot-alvaro.herokuapp.com
+
+#https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/deleteWebhook?url=https://rossmann-telegram-bot-alvaro.herokuapp.com
 
 ## get updates
 #https://api.telegram.org/bot1817977976:AAFDgp7RiE1NT8-cmKQjbCIn_528z5aMlWY/getUpdates
@@ -33,8 +41,8 @@ def send_message( chat_id, text ):
 
 def load_dataset( store_id ):
     # Loading test dataset
-    df10 = pd.read_csv( '/home/kazu/Repos/Rossmann_Sales_Prediction/Data/test.csv' )
-    df_store_raw = pd.read_csv( '/home/kazu/Repos/Rossmann_Sales_Prediction/Data/store.csv' )
+    df10 = pd.read_csv( 'test.csv' )
+    df_store_raw = pd.read_csv( 'store.csv' )
 
     # merge test dataset + store
     df_test = pd.merge( df10, df_store_raw, how='left', on='Store' )
@@ -74,11 +82,11 @@ def parse_message( message ):
     store_id = message['message']['text']
     
     store_id = store_id.replace( '/', '' )
+    
     try:
         store_id = int( store_id )
 
     except ValueError:
-        send_message( chat_id, 'Store ID is Wrong' )
         store_id = 'error'
         
     return chat_id, store_id
@@ -125,4 +133,5 @@ def index():
         return'<h1> Rossmann Telegram BOT <h1>'
 
 if __name__ == '__main__':
-    app.run( host='0.0.0.0', port=5000 )
+	port = os.environ.get('PORT', 5000)
+	app.run( host='0.0.0.0', port=port )
